@@ -62,6 +62,10 @@ builder.Services.AddMediatR(cfg =>
 //builder.Services.AddTransient<IEmailSender<User>, EmailSender>();
 //builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 //builder.Services.AddScoped<IPhotoService, PhotoService>();
+
+builder.Services.AddHttpClient();
+builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
+builder.Services.AddScoped<IArticleService, ArticleService>();
 builder.Services.AddAutoMapper(cfg =>
 {
     cfg.LicenseKey = builder.Configuration["Licences:MediatR"];
