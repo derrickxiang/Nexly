@@ -19,7 +19,7 @@ namespace Nexly.Application.Articles.Queries
         {
             public async Task<Result<List<ArticleDto>>> Handle(Query request, CancellationToken cancellationToken)
             {
-                var query = await context.NewsArticles
+                var query = await context.Articles
                     .OrderBy(x => x.PublishedAt)
                     .Where(x =>  request.Params.StartDate == DateTime.MinValue || x.PublishedAt >= (request.Params.Cursor ?? request.Params.StartDate))
                     .ToListAsync();

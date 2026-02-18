@@ -14,7 +14,7 @@ namespace Nexly.Application.Articles.Commands
         {
             public async Task<Result<Unit>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var article = await context.NewsArticles.FindAsync([Guid.Parse(request.Id)], cancellationToken);
+                var article = await context.Articles.FindAsync([Guid.Parse(request.Id)], cancellationToken);
 
                 if (article == null) return Result<Unit>.Failure("article not found", 404);
 

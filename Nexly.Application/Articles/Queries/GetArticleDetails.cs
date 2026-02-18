@@ -17,7 +17,7 @@ namespace Nexly.Application.Articles.Queries
         {
             public async Task<Result<ArticleDto>> Handle(Query request, CancellationToken cancellationToken)
             {
-                var article = await context.NewsArticles.FirstOrDefaultAsync(x => x.Id == Guid.Parse(request.Id));
+                var article = await context.Articles.FirstOrDefaultAsync(x => x.Id == Guid.Parse(request.Id));
 
                 if (article == null) return Result<ArticleDto>.Failure("Article not found", 404);
 

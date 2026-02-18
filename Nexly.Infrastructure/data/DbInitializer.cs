@@ -22,9 +22,9 @@ namespace Nexly.Infrastructure.data
                 }
             }
 
-            if (context.NewsArticles.Any()) return;
+            if (context.Articles.Any()) return;
 
-            var articles = new List<NewsArticle>
+            var articles = new List<Article>
             {
                 new()
                 {
@@ -52,7 +52,7 @@ namespace Nexly.Infrastructure.data
                 }
             };
 
-            context.NewsArticles.AddRange(articles);
+            context.Articles.AddRange(articles);
 
             await context.SaveChangesAsync();
         }

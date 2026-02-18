@@ -16,9 +16,9 @@ namespace Nexly.Application.Articles.Commands
         {
             public async Task<Result<string>> Handle(Command request, CancellationToken cancellationToken)
             {
-                var article = mapper.Map<NewsArticle>(request.CreateArticleDto);
+                var article = mapper.Map<Article>(request.CreateArticleDto);
 
-                context.NewsArticles.Add(article);
+                context.Articles.Add(article);
 
                 var result = await context.SaveChangesAsync(cancellationToken) > 0;
 

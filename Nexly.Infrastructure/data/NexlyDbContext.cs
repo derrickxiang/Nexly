@@ -6,10 +6,10 @@ public class NexlyDbContext : DbContext
     {
     }
 
-    public DbSet<NewsArticle> NewsArticles { get; set; }
+    public DbSet<Article> Articles { get; set; }
     public DbSet<Source> Sources { get; set; }
     public DbSet<TopicTag> TopicTags { get; set; }
-    public DbSet<NewsArticleTopic> NewsArticleTopics { get; set; }
+    public DbSet<ArticleTopic> ArticleTopics { get; set; }
     public DbSet<NewsCluster> NewsClusters { get; set; }
     public DbSet<ProcessingLog> ProcessingLogs { get; set; }
     public DbSet<AIResult> AIResults { get; set; }
@@ -18,26 +18,26 @@ public class NexlyDbContext : DbContext
     {
         base.OnModelCreating(modelBuilder);
         
-        modelBuilder.Entity<NewsArticleTopic>()
-            .HasKey(nat => new { nat.NewsArticleId, nat.TopicTagId });
+        modelBuilder.Entity<ArticleTopic>()
+            .HasKey(nat => new { nat.ArticleId, nat.TopicTagId });
 
-        modelBuilder.Entity<NewsArticleTopic>()
-            .HasOne(nat => nat.NewsArticle)
+        modelBuilder.Entity<ArticleTopic>()
+            .HasOne(nat => nat.Article)
             .WithMany(na => na.Topics)
-            .HasForeignKey(nat => nat.NewsArticleId);
+            .HasForeignKey(nat => nat.ArticleId);
 
-        modelBuilder.Entity<NewsArticleTopic>()
+        modelBuilder.Entity<ArticleTopic>()
             .HasOne(nat => nat.TopicTag)
             .WithMany(tt => tt.Articles)
             .HasForeignKey(nat => nat.TopicTagId);
 
-        modelBuilder.Entity<NewsArticle>()
+        modelBuilder.Entity<Article>()
             .HasIndex(x => x.Hash);
 
-        modelBuilder.Entity<NewsArticle>()
+        modelBuilder.Entity<Article>()
             .HasIndex(x => x.PublishedAt);
 
-        modelBuilder.Entity<NewsArticle>()
+        modelBuilder.Entity<Article>()
             .HasIndex(x => x.ClusterId);
     }
 }

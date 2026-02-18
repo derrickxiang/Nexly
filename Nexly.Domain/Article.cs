@@ -1,4 +1,4 @@
-public class NewsArticle
+public class Article
 {
     public Guid Id { get; set; }
 
@@ -23,5 +23,5 @@ public class NewsArticle
 
     public float QualityScore { get; set; }
 
-    public ICollection<NewsArticleTopic> Topics { get; set; }
+    public ICollection<ArticleTopic> Topics { get; set; }
 }

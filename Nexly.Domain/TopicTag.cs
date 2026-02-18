@@ -5,5 +5,5 @@ public class TopicTag
     public string Name { get; set; }
     public string Description { get; set; }
     public string Type { get; set; } // e.g., SG / Global / Tech
-    public ICollection<NewsArticleTopic> Articles { get; set; }
+    public ICollection<ArticleTopic> Articles { get; set; }
 }

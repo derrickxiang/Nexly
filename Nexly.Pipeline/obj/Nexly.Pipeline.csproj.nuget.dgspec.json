@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\Nexly\\Nexly.Pipeline\\Nexly.Pipeline.csproj": {}
+    "D:\\projects\\Nexly\\code\\Nexly.Pipeline\\Nexly.Pipeline.csproj": {}
   },
   "projects": {
-    "D:\\projects\\Nexly\\Nexly.Pipeline\\Nexly.Pipeline.csproj": {
+    "D:\\projects\\Nexly\\code\\Nexly.Pipeline\\Nexly.Pipeline.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\Nexly\\Nexly.Pipeline\\Nexly.Pipeline.csproj",
+        "projectUniqueName": "D:\\projects\\Nexly\\code\\Nexly.Pipeline\\Nexly.Pipeline.csproj",
         "projectName": "Nexly.Pipeline",
-        "projectPath": "D:\\projects\\Nexly\\Nexly.Pipeline\\Nexly.Pipeline.csproj",
+        "projectPath": "D:\\projects\\Nexly\\code\\Nexly.Pipeline\\Nexly.Pipeline.csproj",
         "packagesPath": "C:\\Users\\Quinc\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\Nexly\\Nexly.Pipeline\\obj\\",
+        "outputPath": "D:\\projects\\Nexly\\code\\Nexly.Pipeline\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Quinc\\AppData\\Roaming\\NuGet\\NuGet.Config"

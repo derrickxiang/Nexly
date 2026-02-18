@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\Nexly\\Nexly.AI\\Nexly.AI.csproj": {}
+    "D:\\projects\\Nexly\\code\\Nexly.AI\\Nexly.AI.csproj": {}
   },
   "projects": {
-    "D:\\projects\\Nexly\\Nexly.AI\\Nexly.AI.csproj": {
+    "D:\\projects\\Nexly\\code\\Nexly.AI\\Nexly.AI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\Nexly\\Nexly.AI\\Nexly.AI.csproj",
+        "projectUniqueName": "D:\\projects\\Nexly\\code\\Nexly.AI\\Nexly.AI.csproj",
         "projectName": "Nexly.AI",
-        "projectPath": "D:\\projects\\Nexly\\Nexly.AI\\Nexly.AI.csproj",
+        "projectPath": "D:\\projects\\Nexly\\code\\Nexly.AI\\Nexly.AI.csproj",
         "packagesPath": "C:\\Users\\Quinc\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\Nexly\\Nexly.AI\\obj\\",
+        "outputPath": "D:\\projects\\Nexly\\code\\Nexly.AI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Quinc\\AppData\\Roaming\\NuGet\\NuGet.Config"

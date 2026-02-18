@@ -7,11 +7,11 @@ namespace Nexly.Application.Core
     {
         public MappingProfiles()
         {
-            CreateMap<NewsArticle, NewsArticle>();
-            CreateMap<NewsArticle, ArticleDto>()
+            CreateMap<Article, Article>();
+            CreateMap<Article, ArticleDto>()
                 .ForMember(d => d.Id, o => o.MapFrom(s => s.Id.ToString()));
-            CreateMap<ArticleDto, NewsArticle>();
-            CreateMap<CreateArticleDto, NewsArticle>()
+            CreateMap<ArticleDto, Article>();
+            CreateMap<CreateArticleDto, Article>()
                 .ForMember(d => d.Id, o=> o.MapFrom(s => new Guid()));
         }
     }

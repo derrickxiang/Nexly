@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\Nexly\\Nexly.Domain\\Nexly.Domain.csproj": {}
+    "D:\\projects\\Nexly\\code\\Nexly.Domain\\Nexly.Domain.csproj": {}
   },
   "projects": {
-    "D:\\projects\\Nexly\\Nexly.Domain\\Nexly.Domain.csproj": {
+    "D:\\projects\\Nexly\\code\\Nexly.Domain\\Nexly.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\Nexly\\Nexly.Domain\\Nexly.Domain.csproj",
+        "projectUniqueName": "D:\\projects\\Nexly\\code\\Nexly.Domain\\Nexly.Domain.csproj",
         "projectName": "Nexly.Domain",
-        "projectPath": "D:\\projects\\Nexly\\Nexly.Domain\\Nexly.Domain.csproj",
+        "projectPath": "D:\\projects\\Nexly\\code\\Nexly.Domain\\Nexly.Domain.csproj",
         "packagesPath": "C:\\Users\\Quinc\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\Nexly\\Nexly.Domain\\obj\\",
+        "outputPath": "D:\\projects\\Nexly\\code\\Nexly.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Quinc\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -43,6 +43,12 @@
       "frameworks": {
         "net10.0": {
           "targetAlias": "net10.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[10.0.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
