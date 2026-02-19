@@ -21,7 +21,7 @@ namespace Nexly.Application.Articles.Queries
             {
                 var query = await context.Articles
                     .OrderBy(x => x.PublishedAt)
-                    .Where(x =>  request.Params.StartDate == DateTime.MinValue || x.PublishedAt >= (request.Params.Cursor ?? request.Params.StartDate))
+                    //.Where(x =>  request.Params.StartDate == DateTime.MinValue || x.PublishedAt >= (request.Params.Cursor ?? request.Params.StartDate))
                     .ToListAsync();
 
                 //if (!string.IsNullOrEmpty(request.Params.Filter))

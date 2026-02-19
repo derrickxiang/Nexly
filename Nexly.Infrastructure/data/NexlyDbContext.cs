@@ -1,6 +1,8 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Nexly.Domain;
 
-public class NexlyDbContext : DbContext
+public class NexlyDbContext : IdentityDbContext<User>
 {
     public NexlyDbContext(DbContextOptions<NexlyDbContext> options) : base(options)
     {

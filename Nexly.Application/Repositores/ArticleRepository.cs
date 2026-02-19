@@ -16,5 +16,11 @@ namespace Nexly.Application.Repositories
                     .Where(expression)
                     .ToListAsync();
         }
+
+        public Task<Article?> GetByHashAsync(string hash)
+        {
+                        return Context.Set<Article>()
+                    .FirstOrDefaultAsync(a => a.Hash == hash);
+        }
     }
 }

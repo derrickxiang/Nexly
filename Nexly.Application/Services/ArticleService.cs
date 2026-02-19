@@ -72,8 +72,8 @@ namespace Nexly.Application.Services
             QualityScore = dto.QualityScore
         };
 
-        await _repo.AddAsync(entity);
-        await _repo.SaveChangesAsync();
+         _repo.Create(entity);
+        await _repo.SaveAsync();
 
         return true;
         }

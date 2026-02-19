@@ -14,6 +14,9 @@ using Nexly.Api.MiddleWares;
 using Nexly.Application.Articles.Queries;
 using Nexly.Application.Articles.Validators;
 using Nexly.Application.Core;
+using Nexly.Application.Interfaces;
+using Nexly.Application.Repositories;
+using Nexly.Application.Services;
 using Nexly.Domain;
 using Nexly.Infrastructure.data;
 using Serilog;
@@ -63,10 +66,11 @@ builder.Services.AddMediatR(cfg =>
 //builder.Services.AddScoped<IUserAccessor, UserAccessor>();
 //builder.Services.AddScoped<IPhotoService, PhotoService>();
 
+builder.Services.AddTransient<ExceptionMiddleware>();
 builder.Services.AddHttpClient();
 // Repositories
 builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
-builder.Services.AddScoped<IArticleService, ArticleService>();
+//builder.Services.AddScoped<IArticleService, ArticleService>();
 builder.Services.AddAutoMapper(cfg =>
 {
     cfg.LicenseKey = builder.Configuration["Licences:MediatR"];
