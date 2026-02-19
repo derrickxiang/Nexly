@@ -64,7 +64,8 @@ builder.Services.AddMediatR(cfg =>
 //builder.Services.AddScoped<IPhotoService, PhotoService>();
 
 builder.Services.AddHttpClient();
-builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
+// Repositories
+builder.Services.AddScoped<IRepositoryWrapper, RepositoryWrapper>();
 builder.Services.AddScoped<IArticleService, ArticleService>();
 builder.Services.AddAutoMapper(cfg =>
 {
