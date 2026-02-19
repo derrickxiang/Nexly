@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.3.11512.155 d18.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Api", "Nexly.Api\Nexly.Api.csproj", "{71406DD0-7DA9-4518-AD99-436B4DE21DC0}"
 EndProject
@@ -14,6 +14,13 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Infrastructure", "Nexly.Infrastructure\Nexly.Infrastructure.csproj", "{8501D549-7A16-47A9-99A7-1B6069C862A4}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Pipeline", "Nexly.Pipeline\Nexly.Pipeline.csproj", "{A685E0BD-8C11-45F9-9F2B-017A4940D250}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{65180BD5-A7DB-4554-9AAB-7AA33F1F96DA}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Messaging", "Nexly.Messaging\Nexly.Messaging.csproj", "{99611067-D2C1-4835-B36A-895F886A7288}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,8 +104,23 @@ Global
 		{A685E0BD-8C11-45F9-9F2B-017A4940D250}.Release|x64.Build.0 = Release|Any CPU
 		{A685E0BD-8C11-45F9-9F2B-017A4940D250}.Release|x86.ActiveCfg = Release|Any CPU
 		{A685E0BD-8C11-45F9-9F2B-017A4940D250}.Release|x86.Build.0 = Release|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Debug|x64.Build.0 = Debug|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Debug|x86.Build.0 = Debug|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Release|x64.ActiveCfg = Release|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Release|x64.Build.0 = Release|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Release|x86.ActiveCfg = Release|Any CPU
+		{99611067-D2C1-4835-B36A-895F886A7288}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C388AAA4-DE16-47D8-8CFF-127ACF46A45C}
 	EndGlobalSection
 EndGlobal

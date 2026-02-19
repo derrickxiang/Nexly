@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nexly.AI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d3ec01d57fa98d696649d28e45602ab7f918f610")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c92f91c8f691d2c820e2b00432c6152f567327fb")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nexly.AI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nexly.AI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
