@@ -1,47 +1,38 @@
 using Microsoft.AspNetCore.Mvc;
+using Nexly.Application.Articles.Commands;
 using Nexly.Application.Articles.DTOs;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using Nexly.Application.Articles.Queries;
 
 namespace Nexly.Api.Controllers
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class ArticleController : ControllerBase
+    public class ArticleController : BaseApiController
     {
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Article>>> GetArticles()
+        public async Task<ActionResult<List<ArticleDto>>> GetArticles([FromQuery] ArticleParams articleParams)
         {
-            // TODO: Implement GetArticles logic
-            return Ok();
+            return HandleResult(await Mediator.Send(new GetArticleList.Query
+            {
+                Params = articleParams
+            }));
         }
 
-        [HttpGet("{id}")]
-        public async Task<ActionResult<Article>> GetArticleById(int id)
+        [HttpGet("{Id}")]
+        public async Task<ActionResult<ArticleDto>> GetArticleDetail(string Id)
         {
-            // TODO: Implement GetArticleById logic
-            return Ok();
+            return HandleResult(await Mediator.Send(new GetArticleDetails.Query { Id = Id }));
         }
+
 
         [HttpPost]
-        public async Task<ActionResult<Article>> CreateArticle([FromBody] CreateArticleDto request)
+        public async Task<IActionResult> CreateArticle(CreateArticleDto articleDto)
         {
-            // TODO: Implement CreateArticle logic
-            return CreatedAtAction(nameof(GetArticleById), new { id = 0 }, null);
+            return HandleResult(await Mediator.Send(new CreateArticle.Command { CreateArticleDto = articleDto }));
         }
 
-        [HttpPut("{id}")]
-        public async Task<IActionResult> UpdateArticle(int id, [FromBody] CreateArticleDto request)
+        [HttpDelete("{Id}")]
+        public async Task<IActionResult> DeleteArticle(string Id)
         {
-            // TODO: Implement UpdateArticle logic
-            return NoContent();
-        }
-
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteArticle(int id)
-        {
-            // TODO: Implement DeleteArticle logic
-            return NoContent();
+            return HandleResult(await Mediator.Send(new DeleteArticle.Command { Id = Id }));
         }
     }
 }
