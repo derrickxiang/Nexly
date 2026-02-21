@@ -1,16 +1,26 @@
+using Nexly.Worker.Save.Messaging;
+
 namespace Nexly.Worker.Save;
 
-public class Worker(ILogger<Worker> logger) : BackgroundService
+public class Worker : BackgroundService
 {
-    protected override async Task ExecuteAsync(CancellationToken stoppingToken)
+    private readonly ILogger<Worker> _logger;
+    private readonly RabbitMqListener _listener;
+
+    public Worker(
+        ILogger<Worker> logger,
+        RabbitMqListener listener)
     {
-        while (!stoppingToken.IsCancellationRequested)
-        {
-            if (logger.IsEnabled(LogLevel.Information))
-            {
-                logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-            }
-            await Task.Delay(1000, stoppingToken);
-        }
+        _logger = logger;
+        _listener = listener;
+    }
+
+    protected override Task ExecuteAsync(CancellationToken stoppingToken)
+    {
+        _logger.LogInformation("Save Worker started");
+
+        _listener.StartListening();
+
+        return Task.CompletedTask;
     }
 }

@@ -8,7 +8,7 @@ namespace Nexly.Application.Repositories
 
         public RepositoryWrapper(NexlyDbContext dbContext)
         {
-            dbContext = dbContext;
+            this.dbContext = dbContext;
         }
 
         public IArticleRepository Article => _article ?? new ArticleRepository(dbContext);
