@@ -22,7 +22,7 @@ namespace Nexly.Worker.Crawler.Messaging
             _channel = _connection.CreateModel();
 
             _channel.QueueDeclare(
-                queue: "crawler-queue",
+                queue: "ai.jobs",
                 durable: true,
                 exclusive: false,
                 autoDelete: false);
@@ -35,7 +35,7 @@ namespace Nexly.Worker.Crawler.Messaging
 
             _channel.BasicPublish(
                 exchange: "",
-                routingKey: "crawler-queue",
+                routingKey: "ai.jobs",
                 basicProperties: null,
                 body: body);
         }

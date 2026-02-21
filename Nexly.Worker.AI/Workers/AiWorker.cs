@@ -40,6 +40,8 @@ namespace Nexly.Worker.AI.Workers
 
                     _logger.LogInformation("AI Done: {Id}", job.NewsId);
 
+                    await Task.Delay(1000);
+
                     // TODO: Save to DB API or publish event
                 }
                 catch (Exception ex)

@@ -52,7 +52,7 @@ namespace Nexly.Pipeline.Workers
                 };
 
                 await _publisher.PublishAsync(
-                    "ai.request",
+                    "ai.jobs",
                     aiMsg);
             });
 

@@ -10,8 +10,8 @@ namespace Nexly.Worker.AI.Services
     {
         private readonly HttpClient _http;
 
-        private const string ApiKey = "YOUR_API_KEY";
-        private const string Endpoint = "https://api.openai.com/v1/chat/completions";
+        private const string ApiKey = "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";
+        private const string Endpoint = "https://api.openai.com/v1/responses";
 
         public OpenAiService(HttpClient http)
         {
@@ -31,11 +31,12 @@ namespace Nexly.Worker.AI.Services
 
             var req = new
             {
-                model = "gpt-4o-mini",
-                messages = new[]
-                {
-                new { role = "user", content = prompt }
-            }
+                model = "gpt-4.1-mini",
+                input = prompt
+            //    messages = new[]
+            //    {
+            //    new { role = "user", content = prompt }
+            //}
             };
 
             var response = await _http.PostAsJsonAsync(Endpoint, req);
@@ -49,6 +50,8 @@ namespace Nexly.Worker.AI.Services
                 .GetProperty("message")
                 .GetProperty("content")
                 .GetString();
+
+            Console.WriteLine(text);
 
             return new AiResult
             {
