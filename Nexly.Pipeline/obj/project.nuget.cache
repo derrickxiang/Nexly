@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WAkLHRPm6Lg=",
+  "dgSpecHash": "7JcLN5hBzfs=",
   "success": true,
   "projectFilePath": "D:\\projects\\Nexly\\code\\Nexly.Pipeline\\Nexly.Pipeline.csproj",
   "expectedPackageFiles": [
@@ -38,6 +38,8 @@
     "C:\\Users\\Quinc\\.nuget\\packages\\microsoft.extensions.dependencymodel\\10.0.3\\microsoft.extensions.dependencymodel.10.0.3.nupkg.sha512",
     "C:\\Users\\Quinc\\.nuget\\packages\\microsoft.extensions.diagnostics\\10.0.3\\microsoft.extensions.diagnostics.10.0.3.nupkg.sha512",
     "C:\\Users\\Quinc\\.nuget\\packages\\microsoft.extensions.diagnostics.abstractions\\10.0.3\\microsoft.extensions.diagnostics.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\Quinc\\.nuget\\packages\\microsoft.extensions.fileproviders.abstractions\\10.0.3\\microsoft.extensions.fileproviders.abstractions.10.0.3.nupkg.sha512",
+    "C:\\Users\\Quinc\\.nuget\\packages\\microsoft.extensions.hosting.abstractions\\10.0.3\\microsoft.extensions.hosting.abstractions.10.0.3.nupkg.sha512",
     "C:\\Users\\Quinc\\.nuget\\packages\\microsoft.extensions.http\\10.0.3\\microsoft.extensions.http.10.0.3.nupkg.sha512",
     "C:\\Users\\Quinc\\.nuget\\packages\\microsoft.extensions.identity.core\\10.0.3\\microsoft.extensions.identity.core.10.0.3.nupkg.sha512",
     "C:\\Users\\Quinc\\.nuget\\packages\\microsoft.extensions.identity.stores\\10.0.3\\microsoft.extensions.identity.stores.10.0.3.nupkg.sha512",

@@ -1,4 +1,7 @@
-using Nexly.Application.DTOs;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Nexly.Application.Articles.DTOs;
 using Nexly.Application.Interfaces;
 
 public class Worker : BackgroundService

@@ -482,10 +482,4 @@ $RECYCLE.BIN/
 
 # Vim temporary swap files
 *.swp
-
-Nexly.Api/bin*
-Nexly.Api/obj*
-Nexly.AI/obj*
-Nexly.AI/bin*
-
-Nexly.AI/obj/*
+*/obj/*

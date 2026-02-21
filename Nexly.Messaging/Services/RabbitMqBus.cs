@@ -22,7 +22,6 @@ namespace Nexly.Messaging.Services
                 HostName = "localhost"
             };
 
-            // Use the synchronous API so existing synchronous calls compile against IModel
             _connection = factory.CreateConnection();
             _channel = _connection.CreateModel();
         }
@@ -31,20 +30,12 @@ namespace Nexly.Messaging.Services
             string queue,
             T message)
         {
-            _channel.QueueDeclare(
-                queue,
-                durable: true,
-                exclusive: false,
-                autoDelete: false);
+            _channel.QueueDeclare(queue, true, false, false);
 
             var json = JsonSerializer.Serialize(message);
             var body = Encoding.UTF8.GetBytes(json);
 
-            _channel.BasicPublish(
-                exchange: "",
-                routingKey: queue,
-                basicProperties: null,
-                body: body);
+            _channel.BasicPublish("", queue, null, body);
 
             return Task.CompletedTask;
         }
@@ -53,11 +44,7 @@ namespace Nexly.Messaging.Services
             string queue,
             Func<T, Task> handler)
         {
-            _channel.QueueDeclare(
-                queue,
-                durable: true,
-                exclusive: false,
-                autoDelete: false);
+            _channel.QueueDeclare(queue, true, false, false);
 
             var consumer =
                 new EventingBasicConsumer(_channel);
@@ -68,15 +55,15 @@ namespace Nexly.Messaging.Services
                     .GetString(ea.Body.ToArray());
 
                 var obj = JsonSerializer
-                    .Deserialize<T>(json);
+                    .Deserialize<T>(json)!;
 
-                await handler(obj!);
+                await handler(obj);
             };
 
             _channel.BasicConsume(
                 queue,
-                autoAck: true,
-                consumer: consumer);
+                true,
+                consumer);
         }
     }
-}
+    }
