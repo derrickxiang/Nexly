@@ -10,7 +10,7 @@ namespace Nexly.Worker.AI.Services
     {
         private readonly HttpClient _http;
 
-        private const string ApiKey = "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";
+        private const string ApiKey = "You-api-key";
         private const string Endpoint = "https://api.openai.com/v1/responses";
 
         public OpenAiService(HttpClient http)
