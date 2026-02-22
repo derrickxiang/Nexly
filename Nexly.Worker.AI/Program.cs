@@ -3,9 +3,17 @@ using Nexly.Worker.AI.Services;
 using Nexly.Worker.AI.Workers;
 using Polly;
 using Polly.Extensions.Http;
+using Serilog;
 using System.Net;
 
 var builder = Host.CreateApplicationBuilder(args);
+
+Log.Logger = new LoggerConfiguration()
+    .Enrich.WithClientIp()
+    .ReadFrom.Configuration(builder.Configuration)
+    .CreateLogger();
+
+
 
 builder.Services.AddAI();
 builder.Services.AddHostedService<AiWorker>();

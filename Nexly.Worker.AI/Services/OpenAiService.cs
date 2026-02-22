@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore.Diagnostics;
+using System;
 using System.Collections.Generic;
 using System.Net.Http.Json;
 using System.Text;
@@ -9,14 +10,12 @@ namespace Nexly.Worker.AI.Services
     public class OpenAiService : IAiService
     {
         private readonly HttpClient _http;
+        private const string Endpoint = "https://api.siliconflow.cn/v1/chat/completions";
 
-        private const string ApiKey = "You-api-key";
-        private const string Endpoint = "https://api.openai.com/v1/responses";
-
-        public OpenAiService(HttpClient http)
+        public OpenAiService(HttpClient http, IConfiguration config)
         {
             _http = http;
-            _http.DefaultRequestHeaders.Add("Authorization", $"Bearer {ApiKey}");
+            _http.DefaultRequestHeaders.Add("Authorization", $"Bearer {config["siliconflow:ApiKey"]}");
         }
 
         public async Task<AiResult> ProcessAsync(string content)
@@ -31,12 +30,12 @@ namespace Nexly.Worker.AI.Services
 
             var req = new
             {
-                model = "gpt-4.1-mini",
-                input = prompt
-            //    messages = new[]
-            //    {
-            //    new { role = "user", content = prompt }
-            //}
+                model = "Pro/zai-org/GLM-4.7",
+                //input = prompt
+                messages = new[]
+                {
+                new { role = "user", content = prompt }
+            }
             };
 
             var response = await _http.PostAsJsonAsync(Endpoint, req);
