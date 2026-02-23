@@ -1569,6 +1569,22 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
+      "System.ServiceModel.Syndication/10.0.3": {
+        "type": "package",
+        "compile": {
+          "lib/net10.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net10.0/System.ServiceModel.Syndication.dll": {
+            "related": ".xml"
+          }
+        },
+        "build": {
+          "buildTransitive/net8.0/_._": {}
+        }
+      },
       "Nexly.Application/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
@@ -3667,6 +3683,35 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "System.ServiceModel.Syndication/10.0.3": {
+      "sha512": "mloJBxfbjYXgfcfMvH40UWwzekATlUzHLMKPQpg4qab+gpHRgQkhgo4DLz3v7Kacn6000sqoNkxiyk0pJ5x/ig==",
+      "type": "package",
+      "path": "system.servicemodel.syndication/10.0.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "PACKAGE.md",
+        "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.ServiceModel.Syndication.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net8.0/_._",
+        "buildTransitive/netcoreapp2.0/System.ServiceModel.Syndication.targets",
+        "lib/net10.0/System.ServiceModel.Syndication.dll",
+        "lib/net10.0/System.ServiceModel.Syndication.xml",
+        "lib/net462/System.ServiceModel.Syndication.dll",
+        "lib/net462/System.ServiceModel.Syndication.xml",
+        "lib/net8.0/System.ServiceModel.Syndication.dll",
+        "lib/net8.0/System.ServiceModel.Syndication.xml",
+        "lib/net9.0/System.ServiceModel.Syndication.dll",
+        "lib/net9.0/System.ServiceModel.Syndication.xml",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.dll",
+        "lib/netstandard2.0/System.ServiceModel.Syndication.xml",
+        "system.servicemodel.syndication.10.0.3.nupkg.sha512",
+        "system.servicemodel.syndication.nuspec",
+        "useSharedDesignerContext.txt"
+      ]
+    },
     "Nexly.Application/1.0.0": {
       "type": "project",
       "path": "../Nexly.Application/Nexly.Application.csproj",
@@ -3693,7 +3738,8 @@
       "Nexly.Application >= 1.0.0",
       "Nexly.Domain >= 1.0.0",
       "Nexly.Infrastructure >= 1.0.0",
-      "RabbitMQ.Client >= 6.8.1"
+      "RabbitMQ.Client >= 6.8.1",
+      "System.ServiceModel.Syndication >= 10.0.3"
     ]
   },
   "packageFolders": {
@@ -3779,6 +3825,10 @@
           "RabbitMQ.Client": {
             "target": "Package",
             "version": "[6.8.1, )"
+          },
+          "System.ServiceModel.Syndication": {
+            "target": "Package",
+            "version": "[10.0.3, )"
           }
         },
         "imports": [

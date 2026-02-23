@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "4qONu1MV8eM=",
+  "dgSpecHash": "0bshgC1vbGE=",
   "success": true,
   "projectFilePath": "D:\\projects\\Nexly\\code\\Nexly.Pipeline\\Nexly.Pipeline.csproj",
   "expectedPackageFiles": [
@@ -81,7 +81,8 @@
     "C:\\Users\\Quinc\\.nuget\\packages\\system.identitymodel.tokens.jwt\\7.7.1\\system.identitymodel.tokens.jwt.7.7.1.nupkg.sha512",
     "C:\\Users\\Quinc\\.nuget\\packages\\system.memory.data\\8.0.1\\system.memory.data.8.0.1.nupkg.sha512",
     "C:\\Users\\Quinc\\.nuget\\packages\\system.security.cryptography.pkcs\\9.0.4\\system.security.cryptography.pkcs.9.0.4.nupkg.sha512",
-    "C:\\Users\\Quinc\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512"
+    "C:\\Users\\Quinc\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.4\\system.security.cryptography.protecteddata.9.0.4.nupkg.sha512",
+    "C:\\Users\\Quinc\\.nuget\\packages\\system.servicemodel.syndication\\10.0.3\\system.servicemodel.syndication.10.0.3.nupkg.sha512"
   ],
   "logs": []
 }
