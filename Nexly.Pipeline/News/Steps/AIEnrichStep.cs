@@ -1,4 +1,5 @@
-﻿using Nexly.Pipeline.News.Models;
+﻿using Nexly.Pipeline.News.AI;
+using Nexly.Pipeline.News.Models;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,7 +19,7 @@ namespace Nexly.Pipeline.News.Steps
         {
             var prompt = BuildPrompt(news.Content);
 
-            var result = await _ai.GenerateJsonAsync<AIResult>(prompt);
+            var result = await _ai.GenerateJsonAsync<Nexly.Pipeline.News.AI.AIResult>(prompt);
 
             return new AIEnrichedNews
             {
