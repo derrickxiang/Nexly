@@ -1,10 +1,7 @@
 using Nexly.Worker.AI.Extensions;
-using Nexly.Worker.AI.Services;
+using Nexly.Worker.AI.Infrastructure;
 using Nexly.Worker.AI.Workers;
-using Polly;
-using Polly.Extensions.Http;
 using Serilog;
-using System.Net;
 
 var builder = Host.CreateApplicationBuilder(args);
 
@@ -13,27 +10,33 @@ Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .CreateLogger();
 
+// Ensure log directory exists
+Directory.CreateDirectory("Logs");
 
+// Replace default logging providers
+builder.Logging.ClearProviders();
+builder.Services.AddSerilog(Log.Logger);
 
-builder.Services.AddAI();
+// AI
+builder.Services.AddAI(builder.Configuration);
+
+// RabbitMQ
+builder.Services.AddSingleton<RabbitMqConnection>();
+
+// Worker
 builder.Services.AddHostedService<AiWorker>();
 
-builder.Services.AddHttpClient<IAiService, OpenAiService>()
-    .AddPolicyHandler(GetRetryPolicy());
-
 var app = builder.Build();
-app.Run();
 
-static IAsyncPolicy<HttpResponseMessage> GetRetryPolicy()
+try
 {
-    return HttpPolicyExtensions
-        .HandleTransientHttpError()
-        .OrResult(msg => msg.StatusCode == HttpStatusCode.TooManyRequests)
-        .WaitAndRetryAsync(
-            5,
-            retryAttempt => TimeSpan.FromSeconds(Math.Pow(2, retryAttempt)),
-            (outcome, timespan, retryAttempt, context) =>
-            {
-                Console.WriteLine($"Retry {retryAttempt} after {timespan}");
-            });
+    await app.RunAsync();
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Application crashed");
+}
+finally
+{
+    Log.CloseAndFlush();
 }

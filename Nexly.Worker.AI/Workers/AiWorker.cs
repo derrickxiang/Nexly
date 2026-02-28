@@ -1,4 +1,5 @@
-﻿using Nexly.Worker.AI.Models;
+﻿using Nexly.Worker.AI.Abstractions;
+using Nexly.Worker.AI.Models;
 using Nexly.Worker.AI.Services;
 using System;
 using System.Collections.Generic;
@@ -12,12 +13,12 @@ namespace Nexly.Worker.AI.Workers
     {
         private readonly ILogger<AiWorker> _logger;
         private readonly IBus _bus;
-        private readonly IAiService _aiService;
+        private readonly IAiProvider _aiService;
 
         public AiWorker(
             ILogger<AiWorker> logger,
             IBus bus,
-            IAiService aiService)
+            IAiProvider aiService)
         {
             _logger = logger;
             _bus = bus;
@@ -36,7 +37,7 @@ namespace Nexly.Worker.AI.Workers
 
                     _logger.LogInformation("Processing AI Job: {Id}", job.NewsId);
 
-                    var result = await _aiService.ProcessAsync(job.Content);
+                    var result = await _aiService.GenerateAsync(job.Content);
 
                     _logger.LogInformation("AI Done: {Id}", job.NewsId);
 
@@ -48,7 +49,7 @@ namespace Nexly.Worker.AI.Workers
                 {
                     _logger.LogError(ex, "AI Worker Error");
                 }
-            });
+             });
 
             return Task.CompletedTask;
         }
