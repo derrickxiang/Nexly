@@ -1623,7 +1623,8 @@
           "Microsoft.EntityFrameworkCore": "10.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.3",
-          "Nexly.Domain": "1.0.0"
+          "Nexly.Domain": "1.0.0",
+          "RabbitMQ.Client": "6.8.1"
         },
         "compile": {
           "bin/placeholder/Nexly.Infrastructure.dll": {}

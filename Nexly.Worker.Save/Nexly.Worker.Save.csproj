@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
-    <Nullable>enable</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UserSecretsId>dotnet-Nexly.Worker.Save-ef3b2b24-dc64-47cc-9be9-29896123052b</UserSecretsId>
   </PropertyGroup>

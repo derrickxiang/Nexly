@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nexly.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+67e33d0cff00ca9cba9b4d952645f38dcf375caf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f8dd24cfc3eaaaf28a78800ceff54b41eacb16f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nexly.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nexly.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

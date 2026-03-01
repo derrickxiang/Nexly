@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nexly.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b9870d01061222474197c8c48254b090f058eb2d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f8dd24cfc3eaaaf28a78800ceff54b41eacb16f")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nexly.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nexly.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

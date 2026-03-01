@@ -14,10 +14,10 @@ public static class ServiceCollectionExtensions
     {
         services.AddSingleton<IAiUsageTracker, AiUsageTracker>();
 
-        services.AddHttpClient<OpenAiProvider>();
+       // services.AddHttpClient<OpenAiProvider>();
         services.AddHttpClient<SiliconFlowProvider>();
 
-        services.AddTransient<IAiProvider, OpenAiProvider>();
+        //services.AddTransient<IAiProvider, OpenAiProvider>();
         services.AddTransient<IAiProvider, SiliconFlowProvider>();
 
         services.AddTransient<FallbackAiProvider>();

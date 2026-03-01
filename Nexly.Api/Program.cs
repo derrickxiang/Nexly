@@ -18,7 +18,7 @@ using Nexly.Application.Interfaces;
 using Nexly.Application.Repositories;
 using Nexly.Application.Services;
 using Nexly.Domain;
-using Nexly.Infrastructure.data;
+using Nexly.Infrastructure.Persistence.data;
 using Serilog;
 using System;
 using System.Text;

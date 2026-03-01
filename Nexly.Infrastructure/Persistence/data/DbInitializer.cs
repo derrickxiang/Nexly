@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Nexly.Domain;
 
-namespace Nexly.Infrastructure.data
+namespace Nexly.Infrastructure.Persistence.data
 {
     public class DbInitializer
     {
