@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore.Metadata;
-using Nexly.Messaging.Interfaces;
+using Nexly.Messaging.Abstractions;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;

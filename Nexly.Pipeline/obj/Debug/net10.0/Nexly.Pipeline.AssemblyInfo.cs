@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Nexly.Pipeline")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+453a30b64d1404c47140c89101c9c438aa06521b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+389efa03fc3410967aff514ae91e798ea3b384f0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Nexly.Pipeline")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Nexly.Pipeline")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

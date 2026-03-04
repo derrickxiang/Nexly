@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nexly.Messaging.Interfaces
+namespace Nexly.Messaging.Abstractions
 {
     public interface IMessageBus
     {
