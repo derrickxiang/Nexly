@@ -144,52 +144,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.Cryptography.Internal/10.0.3": {
-        "type": "package",
-        "compile": {
-          "lib/net10.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.AspNetCore.Cryptography.Internal.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Cryptography.KeyDerivation/10.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.Internal": "10.0.3"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.Identity.EntityFrameworkCore/10.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore.Relational": "10.0.3",
-          "Microsoft.Extensions.Identity.Stores": "10.0.3"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
         "type": "package",
         "compile": {
@@ -889,43 +843,6 @@
           "buildTransitive/net8.0/_._": {}
         }
       },
-      "Microsoft.Extensions.Identity.Core/10.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.AspNetCore.Cryptography.KeyDerivation": "10.0.3",
-          "Microsoft.Extensions.Diagnostics": "10.0.3",
-          "Microsoft.Extensions.Logging": "10.0.3",
-          "Microsoft.Extensions.Options": "10.0.3"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Extensions.Identity.Core.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Extensions.Identity.Core.dll": {
-            "related": ".xml"
-          }
-        }
-      },
-      "Microsoft.Extensions.Identity.Stores/10.0.3": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.Extensions.Caching.Abstractions": "10.0.3",
-          "Microsoft.Extensions.Identity.Core": "10.0.3",
-          "Microsoft.Extensions.Logging": "10.0.3"
-        },
-        "compile": {
-          "lib/net10.0/Microsoft.Extensions.Identity.Stores.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net10.0/Microsoft.Extensions.Identity.Stores.dll": {
-            "related": ".xml"
-          }
-        }
-      },
       "Microsoft.Extensions.Logging/10.0.3": {
         "type": "package",
         "dependencies": {
@@ -1593,8 +1510,7 @@
           "FluentValidation": "12.1.1",
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "14.0.0",
-          "Nexly.Domain": "1.0.0",
-          "Nexly.Infrastructure": "1.0.0"
+          "Nexly.Domain": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Nexly.Application.dll": {}
@@ -1606,9 +1522,6 @@
       "Nexly.Domain/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v10.0",
-        "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "10.0.3"
-        },
         "compile": {
           "bin/placeholder/Nexly.Domain.dll": {}
         },
@@ -1623,6 +1536,7 @@
           "Microsoft.EntityFrameworkCore": "10.0.3",
           "Microsoft.EntityFrameworkCore.SqlServer": "10.0.3",
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.3",
+          "Nexly.Application": "1.0.0",
           "Nexly.Domain": "1.0.0",
           "RabbitMQ.Client": "6.8.1"
         },
@@ -1830,60 +1744,6 @@
         "lib/netstandard2.0/MediatR.Contracts.xml",
         "mediatr.contracts.2.0.1.nupkg.sha512",
         "mediatr.contracts.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Cryptography.Internal/10.0.3": {
-      "sha512": "STkCfgCECt2cAekgBpXxFDefH5wd4ytYZKihIZSmQqY92BP8N9qN71qFyRpry8Sl/qT5A+bpwe8v7sjDtg5LEA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.cryptography.internal/10.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net10.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
-        "lib/net10.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
-        "lib/net462/Microsoft.AspNetCore.Cryptography.Internal.dll",
-        "lib/net462/Microsoft.AspNetCore.Cryptography.Internal.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.Internal.xml",
-        "microsoft.aspnetcore.cryptography.internal.10.0.3.nupkg.sha512",
-        "microsoft.aspnetcore.cryptography.internal.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Cryptography.KeyDerivation/10.0.3": {
-      "sha512": "c8GgMKpnNf8fUOKXaZXKV5XaLSlvAts8ICvcPr5CIfjHEWJtbq+URIfBGYesyhnOlWAiSgVsdCBZxMEJIHgfLw==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.cryptography.keyderivation/10.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net10.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
-        "lib/net10.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
-        "lib/net462/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
-        "lib/net462/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll",
-        "lib/netstandard2.0/Microsoft.AspNetCore.Cryptography.KeyDerivation.xml",
-        "microsoft.aspnetcore.cryptography.keyderivation.10.0.3.nupkg.sha512",
-        "microsoft.aspnetcore.cryptography.keyderivation.nuspec"
-      ]
-    },
-    "Microsoft.AspNetCore.Identity.EntityFrameworkCore/10.0.3": {
-      "sha512": "6SEGWi35DZ9syBqCT8v5vEkm9tWUayWxVkHWLwW2FdyXSwS0zzEpIzGPLVQGeug3VU8d+hK/PFxFwwZnblv/zA==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.identity.entityframeworkcore/10.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll",
-        "lib/net10.0/Microsoft.AspNetCore.Identity.EntityFrameworkCore.xml",
-        "microsoft.aspnetcore.identity.entityframeworkcore.10.0.3.nupkg.sha512",
-        "microsoft.aspnetcore.identity.entityframeworkcore.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
@@ -2778,44 +2638,6 @@
         "microsoft.extensions.http.10.0.3.nupkg.sha512",
         "microsoft.extensions.http.nuspec",
         "useSharedDesignerContext.txt"
-      ]
-    },
-    "Microsoft.Extensions.Identity.Core/10.0.3": {
-      "sha512": "GdhTmz+BiVEdsFCT7Vqjhlx8q7j7kGPLinJjudPLO48DxZjSIwh9KlOd/AYJoGR21NjkkHiWijcB3RG7rIfMqw==",
-      "type": "package",
-      "path": "microsoft.extensions.identity.core/10.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net10.0/Microsoft.Extensions.Identity.Core.dll",
-        "lib/net10.0/Microsoft.Extensions.Identity.Core.xml",
-        "lib/net462/Microsoft.Extensions.Identity.Core.dll",
-        "lib/net462/Microsoft.Extensions.Identity.Core.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Identity.Core.xml",
-        "microsoft.extensions.identity.core.10.0.3.nupkg.sha512",
-        "microsoft.extensions.identity.core.nuspec"
-      ]
-    },
-    "Microsoft.Extensions.Identity.Stores/10.0.3": {
-      "sha512": "XWu+Xg0dc0VKJxW7iTuhpnSD2jqZ4Kcdr7f3vUf7LOmPkawBLGkUuUA3rl+QQCbXAGnomV/I9T2wTxe1BKkVEA==",
-      "type": "package",
-      "path": "microsoft.extensions.identity.stores/10.0.3",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net10.0/Microsoft.Extensions.Identity.Stores.dll",
-        "lib/net10.0/Microsoft.Extensions.Identity.Stores.xml",
-        "lib/net462/Microsoft.Extensions.Identity.Stores.dll",
-        "lib/net462/Microsoft.Extensions.Identity.Stores.xml",
-        "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.dll",
-        "lib/netstandard2.0/Microsoft.Extensions.Identity.Stores.xml",
-        "microsoft.extensions.identity.stores.10.0.3.nupkg.sha512",
-        "microsoft.extensions.identity.stores.nuspec"
       ]
     },
     "Microsoft.Extensions.Logging/10.0.3": {
@@ -3720,8 +3542,8 @@
     },
     "Nexly.Domain/1.0.0": {
       "type": "project",
-      "path": "../Nexly.Domain/Nexly.Domain.csproj",
-      "msbuildProject": "../Nexly.Domain/Nexly.Domain.csproj"
+      "path": "../Domain/Nexly.Domain.csproj",
+      "msbuildProject": "../Domain/Nexly.Domain.csproj"
     },
     "Nexly.Infrastructure/1.0.0": {
       "type": "project",

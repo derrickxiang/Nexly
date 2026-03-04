@@ -1,23 +1,30 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Nexly.Application.Interfaces.Repositories;
+using Nexly.Application.Interfaces.Services;
+using Nexly.Infrastructure.AI;
+using Nexly.Infrastructure.NewsCollection;
+using Nexly.Infrastructure.Persistence;
+using Nexly.Infrastructure.Persistence.Repositories;
 
-namespace Nexly.Infrastructure
+public static class DependencyInjection
 {
-    public static class DependencyInjection
-    {
-        public static IServiceCollection AddInfrastructure(
+    public static IServiceCollection
+        AddInfrastructure(
             this IServiceCollection services,
             IConfiguration config)
-        {
-            services.AddDbContext<NexlyDbContext>(options =>
-                options.UseSqlite(
-                    config.GetConnectionString("Default")));
+    {
+        services.AddDbContext<NexlyDbContext>(options =>
+            options.UseSqlite(
+                config.GetConnectionString("Default")));
 
-            return services;
-        }
+        services.AddScoped<IArticleRepository, ArticleRepository>();
+        services.AddScoped<ISourceRepository, SourceRepository>();
+
+        services.AddScoped<IAiProvider, OpenAiProvider>();
+        services.AddScoped<IClock, SystemClock>();
+        services.AddScoped<INewsCollector, RssNewsCollector>();
+
+        return services;
     }
 }

@@ -1,6 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
+  <ProjectReference Include="..\Domain\Nexly.Domain.csproj" />
+  <ProjectReference Include="..\Nexly.Application\Nexly.Application.csproj" />
   <ProjectReference Include="..\Nexly.Domain\Nexly.Domain.csproj" />
 </ItemGroup>
 
@@ -13,6 +15,10 @@
   <PackageReference Include="Microsoft.EntityFrameworkCore.Sqlite" Version="10.0.3" />
   <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.3" />
   <PackageReference Include="RabbitMQ.Client" Version="6.8.1" />
+</ItemGroup>
+
+<ItemGroup>
+  <Folder Include="Persistence\Migrations\" />
 </ItemGroup>
 
 <PropertyGroup>

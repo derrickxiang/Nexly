@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <PackageReference Include="AutoMapper" Version="16.0.0" />
@@ -8,8 +8,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Nexly.Domain\Nexly.Domain.csproj" />
-    <ProjectReference Include="..\Nexly.Infrastructure\Nexly.Infrastructure.csproj" />
+    <ProjectReference Include="..\Domain\Nexly.Domain.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
