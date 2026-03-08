@@ -4,12 +4,8 @@ using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System.Text;
 using System.Text.Json;
-using System.Threading.Channels;
 
-namespace Nexly.Messaging.RabbitMQ;
-
-public class RabbitMqConsumer<T, THandler>
-    : EventingBasicConsumer
+public class RabbitMqConsumer<T, THandler> : EventingBasicConsumer
     where THandler : IMessageHandler<T>
 {
     private readonly IServiceProvider _serviceProvider;
@@ -21,24 +17,43 @@ public class RabbitMqConsumer<T, THandler>
     {
         _serviceProvider = serviceProvider;
 
-        Received += async (sender, args) =>
+        Received += OnReceived;
+    }
+
+    private async void OnReceived(
+        object? sender,
+        BasicDeliverEventArgs args)
+    {
+        try
         {
             var body = args.Body.ToArray();
             var json = Encoding.UTF8.GetString(body);
 
             var message = JsonSerializer.Deserialize<T>(json);
 
+            if (message is null)
+            {
+                Model.BasicNack(args.DeliveryTag, false, false);
+                return;
+            }
+
             using var scope = _serviceProvider.CreateScope();
+
             var handler = scope.ServiceProvider
                 .GetRequiredService<THandler>();
 
             await handler.HandleAsync(
-                message!,
+                message,
                 CancellationToken.None);
 
-            Channel.BasicAck(
+            Model.BasicAck(args.DeliveryTag, false);
+        }
+        catch (Exception ex)
+        {
+            Model.BasicNack(
                 args.DeliveryTag,
-                multiple: false);
-        };
+                multiple: false,
+                requeue: true);
+        }
     }
 }

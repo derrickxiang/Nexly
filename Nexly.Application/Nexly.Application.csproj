@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Domain\Nexly.Domain.csproj" />
+    <ProjectReference Include="..\Nexly.Messaging\Nexly.Messaging.csproj" />
   </ItemGroup>
 
   <PropertyGroup>

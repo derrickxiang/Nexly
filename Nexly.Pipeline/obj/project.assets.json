@@ -1510,7 +1510,8 @@
           "FluentValidation": "12.1.1",
           "FluentValidation.DependencyInjectionExtensions": "12.1.1",
           "MediatR": "14.0.0",
-          "Nexly.Domain": "1.0.0"
+          "Nexly.Domain": "1.0.0",
+          "Nexly.Messaging": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Nexly.Application.dll": {}
@@ -1538,13 +1539,30 @@
           "Microsoft.EntityFrameworkCore.Sqlite": "10.0.3",
           "Nexly.Application": "1.0.0",
           "Nexly.Domain": "1.0.0",
-          "RabbitMQ.Client": "6.8.1"
+          "RabbitMQ.Client": "6.8.1",
+          "System.ServiceModel.Syndication": "10.0.3"
         },
         "compile": {
           "bin/placeholder/Nexly.Infrastructure.dll": {}
         },
         "runtime": {
           "bin/placeholder/Nexly.Infrastructure.dll": {}
+        }
+      },
+      "Nexly.Messaging/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v10.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "10.0.3",
+          "Microsoft.Extensions.Configuration.Abstractions": "10.0.3",
+          "Microsoft.Extensions.Options.ConfigurationExtensions": "10.0.3",
+          "RabbitMQ.Client": "6.8.1"
+        },
+        "compile": {
+          "bin/placeholder/Nexly.Messaging.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Nexly.Messaging.dll": {}
         }
       }
     }
@@ -3549,6 +3567,11 @@
       "type": "project",
       "path": "../Nexly.Infrastructure/Nexly.Infrastructure.csproj",
       "msbuildProject": "../Nexly.Infrastructure/Nexly.Infrastructure.csproj"
+    },
+    "Nexly.Messaging/1.0.0": {
+      "type": "project",
+      "path": "../Nexly.Messaging/Nexly.Messaging.csproj",
+      "msbuildProject": "../Nexly.Messaging/Nexly.Messaging.csproj"
     }
   },
   "projectFileDependencyGroups": {

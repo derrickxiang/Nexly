@@ -8,14 +8,12 @@ namespace Nexly.Messaging;
 public static class DependencyInjection
 {
     public static IServiceCollection AddMessaging(
-        this IServiceCollection services,
-        IConfiguration configuration)
+    this IServiceCollection services,
+    IConfiguration configuration)
     {
-        var options = configuration
-            .GetSection("RabbitMq")
-            .Get<RabbitMqOptions>()!;
+        services.Configure<RabbitMqOptions>(
+            configuration.GetSection("RabbitMq"));
 
-        services.AddSingleton(options);
         services.AddSingleton<RabbitMqConnectionManager>();
         services.AddSingleton<IMessageBus, RabbitMqBus>();
 

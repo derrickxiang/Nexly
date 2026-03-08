@@ -13,7 +13,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Pipeline", "Nexly.Pip
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{65180BD5-A7DB-4554-9AAB-7AA33F1F96DA}"
 	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
 		docker-compose.yml = docker-compose.yml
+		README.md = README.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Worker.AI", "Nexly.Worker.AI\Nexly.Worker.AI.csproj", "{5772195B-CFDE-45A5-8C42-B376F5AA7B6D}"
@@ -23,6 +25,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Domain", "Domain\Nexly.Domain.csproj", "{266E7513-A2BF-4D9D-B565-6B3C26AF0054}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Messaging", "Nexly.Messaging\Nexly.Messaging.csproj", "{068E1F3F-371F-C182-64FF-C7E331C304E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nexly.Worker", "Nexly.Worker\Nexly.Worker.csproj", "{1A094407-69B8-4800-85B0-C6B507CDDBBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -130,6 +134,18 @@ Global
 		{068E1F3F-371F-C182-64FF-C7E331C304E1}.Release|x64.Build.0 = Release|Any CPU
 		{068E1F3F-371F-C182-64FF-C7E331C304E1}.Release|x86.ActiveCfg = Release|Any CPU
 		{068E1F3F-371F-C182-64FF-C7E331C304E1}.Release|x86.Build.0 = Release|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Debug|x64.Build.0 = Debug|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Debug|x86.Build.0 = Debug|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Release|x64.ActiveCfg = Release|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Release|x64.Build.0 = Release|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Release|x86.ActiveCfg = Release|Any CPU
+		{1A094407-69B8-4800-85B0-C6B507CDDBBD}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,10 +6,9 @@ namespace Nexly.Messaging.Abstractions
 {
     public interface IMessageBus
     {
-        Task PublishAsync<T>(string queue, T message);
+        Task PublishAsync<T>(T message, CancellationToken ct);
 
-        void Subscribe<T>(
-            string queue,
-            Func<T, Task> handler);
+        void Subscribe<T, THandler>()
+        where THandler : IMessageHandler<T>;
     }
 }
